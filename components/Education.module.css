@@ -4,7 +4,7 @@
   display: grid; grid-template-columns: auto 1fr auto; gap: 1.25rem; align-items: center;
   background: var(--surf); border: 1px solid var(--bor);
   border-radius: var(--r); padding: 1.4rem 1.5rem;
-  backdrop-filter: blur(12px); box-shadow: var(--shadow-sm); transition: all var(--ease);
+  backdrop-filter: blur(12px); box-shadow: 0 4px 20px rgba(0,0,0,0.10), 0 1px 6px rgba(0,0,0,0.06); transition: all var(--ease);
 }
 .ecard:hover { border-color: var(--bort); transform: translateX(6px); }
 .eico { width: 50px; height: 50px; border-radius: 14px; display: flex; align-items: center; justify-content: center; font-size: 1.4rem; background: var(--tdim); border: 1px solid var(--bort); }
@@ -21,7 +21,7 @@
   display: flex; align-items: center; gap: 1rem;
   padding: 1.2rem 1.4rem; background: var(--surf);
   border: 1px solid var(--bor); border-radius: var(--r);
-  backdrop-filter: blur(12px); box-shadow: var(--shadow-sm); transition: all var(--ease);
+  backdrop-filter: blur(12px); box-shadow: 0 4px 20px rgba(0,0,0,0.10), 0 1px 6px rgba(0,0,0,0.06); transition: all var(--ease);
 }
 .cert:hover { border-color: rgba(184,118,10,); }
 .cico   { font-size: 1.4rem; min-width: 34px; }

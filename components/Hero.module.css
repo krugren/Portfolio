@@ -1,0 +1,89 @@
+﻿.hero {
+  min-height: 100vh; display: flex; align-items: center;
+  padding-top: 68px; overflow: hidden; position: relative; z-index: 1;
+}
+.gridBg {
+  position: absolute; inset: 0; z-index: 0; pointer-events: none;
+  background-image: radial-gradient(circle, rgba(0,212,170,0.12) 1px, transparent 1px);
+  background-size: 36px 36px;
+  mask-image: radial-gradient(ellipse 80% 60% at 50% 50%, black 0%, transparent 100%);
+  -webkit-mask-image: radial-gradient(ellipse 80% 60% at 50% 50%, black 0%, transparent 100%);
+}
+.grid { display: grid; grid-template-columns: 1fr auto; gap: 4rem; align-items: center; width: 100%; position: relative; z-index: 1; }
+
+.eyebrow {
+  display: inline-flex; align-items: center; gap: 0.55rem;
+  padding: 0.32rem 0.9rem; background: var(--tdim); border: 1px solid var(--bort);
+  border-radius: 100px; font-size: 0.78rem; font-family: var(--font-mono); color: var(--teal);
+  margin-bottom: 1.4rem;
+}
+.dot { width: 7px; height: 7px; border-radius: 50%; background: var(--teal); animation: pulse 2s infinite; }
+@keyframes pulse { 0%,100%{opacity:1;box-shadow:0 0 0 0 rgba(0,212,170,0.4)} 50%{opacity:.6;box-shadow:0 0 0 6px rgba(0,212,170,0)} }
+
+.name {
+  font-family: var(--font-display);
+  font-size: clamp(3rem, 6.5vw, 5.2rem);
+  font-weight: 700; line-height: 1.05; margin-bottom: 1rem;
+}
+.outline {
+  color: transparent; -webkit-text-stroke: 2px var(--teal);
+  background: linear-gradient(135deg, var(--teal), var(--gold));
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.typeRow { display: flex; align-items: center; gap: 0; margin-bottom: 1.2rem; min-height: 1.8rem; }
+.typed  { font-size: 1.1rem; font-weight: 600; color: var(--teal); font-family: var(--font-mono); }
+.cursor { font-size: 1.2rem; color: var(--teal); animation: blink 1s step-end infinite; margin-left: 2px; }
+@keyframes blink { 0%,100%{opacity:1} 50%{opacity:0} }
+
+.sub { font-size: 1rem; color: var(--mut); margin-bottom: 2rem; max-width: 480px; line-height: 1.75; }
+.sub strong { color: var(--txt); }
+
+.btns { display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 2.5rem; }
+
+.socials { display: flex; gap: 0.75rem; }
+.socials a {
+  display: flex; align-items: center; justify-content: center;
+  width: 44px; height: 44px; border: 1px solid var(--bor); border-radius: 12px;
+  color: var(--dim); transition: all var(--ease);
+}
+.socials a:hover { border-color: var(--teal); color: var(--teal); background: var(--tdim); transform: translateY(-3px); }
+
+/* Floating card */
+.card {
+  background: var(--surf); border: 1px solid var(--bor); border-radius: 24px; padding: 2rem;
+  min-width: 270px; backdrop-filter: blur(22px);
+  display: flex; flex-direction: column; gap: 1.4rem;
+  box-shadow: 0 0 60px rgba(0,212,170,0.04);
+}
+.avatar {
+  width: 72px; height: 72px; border-radius: 50%;
+  background: linear-gradient(135deg, var(--teal), var(--gold));
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--font-display); font-size: 1.85rem; font-weight: 700; color: var(--bg);
+  box-shadow: 0 8px 32px rgba(0,212,170,0.3);
+}
+.divider { height: 1px; background: var(--bor); }
+.statRow { display: flex; gap: 2rem; }
+.stat { display: flex; flex-direction: column; }
+.num { font-size: 1.8rem; font-weight: 700; color: var(--teal); line-height: 1; }
+.slb { font-size: 0.72rem; color: var(--dim); margin-top: 0.2rem; }
+.badge { display: flex; align-items: center; gap: 0.6rem; font-size: 0.8rem; color: var(--mut); }
+.bico { color: var(--teal); display: flex; align-items: center; }
+
+/* Dual identity pill */
+.dualPill {
+  display: inline-flex; align-items: center; gap: 0.6rem;
+  margin-top: 3.5rem; padding: 0.45rem 1.2rem;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid var(--bor); border-radius: 100px;
+  font-size: 0.8rem; font-family: var(--font-mono);
+  position: relative; z-index: 1;
+}
+.pillTeal { display: flex; align-items: center; gap: 0.4rem; color: var(--teal); }
+.pillGold { display: flex; align-items: center; gap: 0.4rem; color: var(--gold); }
+.pillX { color: var(--dim); font-size: 0.7rem; }
+
+@media (max-width: 900px) { .grid { grid-template-columns: 1fr; } .card { display: none; } }
+@media (max-width: 600px) { .name { font-size: 2.8rem; } .typed { font-size: 0.9rem; } }

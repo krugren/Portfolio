@@ -33,10 +33,15 @@ jobs:
       - name: Build
         run: npm run build
 
+      - name: Restructure for basePath /Portfolio
+        run: |
+          mkdir -p deploy/Portfolio
+          cp -r out/. deploy/Portfolio/
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./out
+          path: ./deploy
 
   deploy:
     environment:

@@ -4,9 +4,9 @@ import { IconGradCap, IconBook, IconSchool, IconRobot, IconShield, IconCheckCirc
 import styles from "./Education.module.css";
 
 const EDU = [
-  { icon: <IconGradCap size={22} />, title: "B.Tech — Food Technology & Management (FTM)", inst: "National Institute of Food Technology Entrepreneurship and Management (NIFTEM-K), Kundli", score: "6.77", yr: "CGPA · 2023–Present" },
-  { icon: <IconBook    size={22} />, title: "Higher Secondary Certificate (HSC)",            inst: "Bharathi Vidhya Bhavan",                                                                     score: "72.7%", yr: "2023" },
-  { icon: <IconSchool  size={22} />, title: "Class X — CBSE",                                inst: "The Bharathi Vidhya Bhavan",                                                                 score: "83%",   yr: "2021" },
+  { icon: <IconGradCap size={22} />, title: "B.Tech — Food Technology & Management (FTM)", inst: "National Institute of Food Technology Entrepreneurship and Management (NIFTEM-K), Kundli", score: "6.77 CGPA", yr: "2023–Present" },
+  { icon: <IconBook    size={22} />, title: "Higher Secondary Certificate (HSC)",            inst: "Bharathi Vidhya Bhavan",                                                                     score: "72.7%",    yr: "· 2023" },
+  { icon: <IconSchool  size={22} />, title: "Class X — CBSE",                                inst: "The Bharathi Vidhya Bhavan",                                                                 score: "83%",      yr: "· 2021" },
 ];
 
 const CERTS = [

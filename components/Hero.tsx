@@ -1,35 +1,16 @@
 ﻿"use client";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import { useTypewriter } from "./useTypewriter";
 import { IconLinkedIn, IconGitHub, IconEmail, IconPhone, IconGradCap, IconPin, IconBuilding, IconBrain } from "./Icons";
 import styles from "./Hero.module.css";
 
 const ROLES = ["Food Technology Undergraduate", "AI-Assisted Builder", "Student Community Leader"];
 
-function AnimatedCounter({ target, suffix = "" }: { target: number; suffix?: string }) {
-  const [val, setVal] = useState(0);
-  const ref = useRef<HTMLSpanElement>(null);
-  useEffect(() => {
-    const el = ref.current;
-    if (!el) return;
-    const io = new IntersectionObserver(([entry]) => {
-      if (!entry.isIntersecting) return;
-      io.disconnect();
-      const start = performance.now();
-      const dur = 1200;
-      const tick = (now: number) => {
-        const t = Math.min((now - start) / dur, 1);
-        const ease = 1 - Math.pow(1 - t, 3);
-        setVal(parseFloat((ease * target).toFixed(2)));
-        if (t < 1) requestAnimationFrame(tick);
-      };
-      requestAnimationFrame(tick);
-    }, { threshold: 0.5 });
-    io.observe(el);
-    return () => io.disconnect();
-  }, [target]);
-  return <span ref={ref}>{val % 1 !== 0 ? val.toFixed(2) : Math.round(val)}{suffix}</span>;
-}
+const STATS = [
+  { val: "6.77", label: "CGPA" },
+  { val: "3",    label: "Projects" },
+  { val: "2023", label: "Started" },
+];
 
 export default function Hero() {
   const o1 = useRef<HTMLDivElement>(null);
@@ -109,10 +90,10 @@ export default function Hero() {
             <div className={styles.avatar}>K</div>
             <div className={styles.divider} />
             <div className={styles.statRow}>
-              {([["6.77","CGPA"],[3,"Projects"],[2,"Yrs Exp"]] as [number,string][]).map(([n, l]) => (
-                <div key={String(l)} className={styles.stat}>
-                  <span className={styles.num}><AnimatedCounter target={Number(n)} suffix={Number(n) >= 3 ? "+" : ""} /></span>
-                  <span className={styles.slb}>{l}</span>
+              {STATS.map(({ val, label }) => (
+                <div key={label} className={styles.stat}>
+                  <span className={styles.num}>{val}</span>
+                  <span className={styles.slb}>{label}</span>
                 </div>
               ))}
             </div>
@@ -128,7 +109,6 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* Dual identity pill */}
         <div className={styles.dualPill}>
           <span className={styles.pillTeal}>
             <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M9 3h6M9 3v7l-5 9a1 1 0 0 0 .9 1.5h14.2a1 1 0 0 0 .9-1.5L15 10V3"/><path d="M9 17h6"/></svg>

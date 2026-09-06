@@ -1,24 +1,20 @@
 ﻿"use client";
 import { useEffect, useRef } from "react";
-import { IconFlask, IconChip, IconTools, IconUsers } from "./Icons";
+import { IconFlask, IconChip, IconUsers } from "./Icons";
 import styles from "./Skills.module.css";
 
 const CATEGORIES = [
   {
     icon: <IconFlask size={20} />, title: "Food Technology", sub: "Domain & Industry", variant: "teal",
-    chips: ["QA / QC","Sensory Evaluation","New Product Development","Food Safety","HACCP","ISO 22000:2018","FSSC 22000 V6.0","NPD Trials","Sensory Panels","Production"],
+    chips: ["QA / QC","Sensory Evaluation","New Product Development","Food Safety","HACCP","ISO 22000:2018","FSSC 22000 V6.0"],
   },
   {
-    icon: <IconChip size={20} />, title: "AI & Technical", sub: "Software & AI Tools", variant: "gold",
-    chips: ["AI-Assisted Development","Claude (Opus/Sonnet)","ChatGPT","Google Antigravity","Next.js","Prisma","REST APIs","PostgreSQL / SQLite","SEO & Security Review","Requirements & Architecture"],
+    icon: <IconChip size={20} />, title: "AI & Development", sub: "Software & AI Tools", variant: "gold",
+    chips: ["Claude · Opus & Sonnet","ChatGPT","Google Antigravity","Next.js","Prisma","REST APIs","PostgreSQL / SQLite","AI-Assisted Development","Requirements & Architecture"],
   },
   {
-    icon: <IconTools size={20} />, title: "Productivity & Office", sub: "Tools & Software", variant: "teal",
-    chips: ["Microsoft Excel","Microsoft Word","PowerPoint","Canva","AI-generated Visuals","Vectorization / Image Design"],
-  },
-  {
-    icon: <IconUsers size={20} />, title: "Leadership & Soft Skills", sub: "Professional Competencies", variant: "gold",
-    chips: ["Communication","Team Management","Event Coordination","Problem Solving","Time Management","Planning & Budgeting","Documentation","Stakeholder Liaison"],
+    icon: <IconUsers size={20} />, title: "Community & Productivity", sub: "Leadership & Tools", variant: "teal",
+    chips: ["Event Coordination","Team Management","Planning & Budgeting","Communication","Excel · PowerPoint","Canva","Documentation"],
   },
 ];
 
@@ -39,7 +35,7 @@ export default function Skills() {
     <section id="skills" className={`${styles.section} pad`}>
       <div className="wrap">
         <span className="section-label">Skills</span>
-        <h2 className="section-title">Expertise &amp; Tools</h2>
+        <h2 className="section-title">Skills &amp; Tools</h2>
         <p className="section-desc">A dual skill-set spanning food science and modern technology — built through academic training, industry stints, and real project delivery.</p>
         <div ref={ref} className={styles.grid}>
           {CATEGORIES.map(({ icon, title, sub, variant, chips }) => (
@@ -49,9 +45,7 @@ export default function Skills() {
                 <div><h3 className={styles.title}>{title}</h3><div className={styles.sub}>{sub}</div></div>
               </div>
               <div className={styles.chips}>
-                {chips.map(c => (
-                  <span key={c} className={`chip ${variant === "teal" ? "chip-teal" : "chip-gold"}`}>{c}</span>
-                ))}
+                {chips.map(c => <span key={c} className={`chip chip-${variant === "teal" ? "teal" : "gold"}`}>{c}</span>)}
               </div>
             </div>
           ))}

@@ -1,7 +1,7 @@
 ﻿:root {
   --bg:    #080d1a;
   --bg2:   #0d1628;
-  --surf:  rgba(13, 22, 40, 0.75);
+  --surf:  rgba(255, 255, 255, 0.04);
   --teal:  #00d4aa;
   --tdim:  rgba(0, 212, 170, 0.10);
   --gold:  #f0a500;
@@ -9,8 +9,8 @@
   --txt:   #e2e8f0;
   --mut:   #94a3b8;
   --dim:   #64748b;
-  --bor:   rgba(255, 255, 255, 0.07);
-  --bort:  rgba(0, 212, 170, 0.22);
+  --bor:   rgba(255, 255, 255, 0.09);
+  --bort:  rgba(0, 212, 170, 0.25);
   --r:     16px;
   --ease:  0.3s cubic-bezier(0.4, 0, 0.2, 1);
   --font-body:    var(--font-inter), system-ui, sans-serif;
@@ -19,10 +19,17 @@
 }
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; }
+
+html {
+  scroll-behavior: smooth;
+  background: #080d1a;
+}
+
 body {
   font-family: var(--font-body);
-  background: var(--bg);
+  background-color: #080d1a;
+  background-color: var(--bg);
+  color: #e2e8f0;
   color: var(--txt);
   line-height: 1.7;
   overflow-x: hidden;
@@ -30,8 +37,8 @@ body {
 a { text-decoration: none; color: inherit; }
 
 ::-webkit-scrollbar { width: 5px; }
-::-webkit-scrollbar-track { background: var(--bg); }
-::-webkit-scrollbar-thumb { background: var(--teal); border-radius: 10px; }
+::-webkit-scrollbar-track { background: #080d1a; }
+::-webkit-scrollbar-thumb { background: #00d4aa; border-radius: 10px; }
 
 .wrap { max-width: 1100px; margin: 0 auto; padding: 0 2rem; }
 .pad  { padding: 100px 0; }
@@ -54,12 +61,12 @@ a { text-decoration: none; color: inherit; }
 .btn-primary {
   display: inline-flex; align-items: center; gap: 0.5rem;
   padding: 0.78rem 2rem;
-  background: linear-gradient(135deg, var(--teal), #00c49a);
-  color: var(--bg); border-radius: 100px; font-weight: 700; font-size: 0.9rem;
+  background: linear-gradient(135deg, #00d4aa, #00c49a);
+  color: #080d1a; border-radius: 100px; font-weight: 700; font-size: 0.9rem;
   border: none; cursor: pointer;
-  box-shadow: 0 4px 28px rgba(0, 212, 170, 0.3); transition: all var(--ease);
+  box-shadow: 0 4px 28px rgba(0,212,170,0.3); transition: all var(--ease);
 }
-.btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 38px rgba(0, 212, 170, 0.45); }
+.btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 38px rgba(0,212,170,0.45); }
 
 .btn-ghost {
   display: inline-flex; align-items: center; gap: 0.5rem;
@@ -70,14 +77,14 @@ a { text-decoration: none; color: inherit; }
 .btn-ghost:hover { border-color: var(--teal); color: var(--teal); }
 
 .chip { padding: 0.28rem 0.78rem; border-radius: 100px; font-size: 0.75rem; font-weight: 500; }
-.chip-teal    { background: var(--tdim); color: var(--teal); border: 1px solid rgba(0,212,170,0.18); }
-.chip-gold    { background: var(--gdim); color: var(--gold); border: 1px solid rgba(240,165,0,0.18); }
-.chip-neutral { background: rgba(255,255,255,0.04); color: var(--mut); border: 1px solid var(--bor); }
+.chip-teal    { background: var(--tdim); color: var(--teal); border: 1px solid rgba(0,212,170,0.22); }
+.chip-gold    { background: var(--gdim); color: var(--gold); border: 1px solid rgba(240,165,0,0.22); }
+.chip-neutral { background: rgba(255,255,255,0.05); color: var(--mut); border: 1px solid var(--bor); }
 
 .orb { position: fixed; border-radius: 50%; filter: blur(130px); pointer-events: none; z-index: 0; }
-.orb-1 { width: 650px; height: 650px; top: -180px; left: -200px; background: radial-gradient(circle, rgba(0,212,170,0.09) 0%, transparent 70%); }
-.orb-2 { width: 520px; height: 520px; bottom: 5%; right: -180px; background: radial-gradient(circle, rgba(240,165,0,0.08) 0%, transparent 70%); }
-.orb-3 { width: 380px; height: 380px; top: 55%; left: 42%; background: radial-gradient(circle, rgba(0,212,170,0.05) 0%, transparent 70%); }
+.orb-1 { width: 650px; height: 650px; top: -180px; left: -200px; background: radial-gradient(circle, rgba(0,212,170,0.12) 0%, transparent 70%); }
+.orb-2 { width: 520px; height: 520px; bottom: 5%; right: -180px; background: radial-gradient(circle, rgba(240,165,0,0.10) 0%, transparent 70%); }
+.orb-3 { width: 380px; height: 380px; top: 55%; left: 42%; background: radial-gradient(circle, rgba(0,212,170,0.06) 0%, transparent 70%); }
 
 .fade-up { opacity: 0; transform: translateY(28px); transition: opacity 0.6s cubic-bezier(0.4,0,0.2,1), transform 0.6s cubic-bezier(0.4,0,0.2,1); }
 .fade-up.visible { opacity: 1; transform: translateY(0); }

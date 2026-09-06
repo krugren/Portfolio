@@ -17,14 +17,14 @@ const playfair = Playfair_Display({
 
 const jetbrains = JetBrains_Mono({
   subsets: ["latin"],
-  variable: "--font-mono",
+  variable: "--font-jetbrains",
   display: "swap",
 });
 
 export const metadata: Metadata = {
   title: "Kruththik S S | Food Technology & AI-Assisted Builder",
   description:
-    "Portfolio of Kruththik S S — Food Technology Undergraduate, AI-Assisted Builder, and Student Community Leader at NIFTEM-K.",
+    "Portfolio of Kruththik S S - Food Technology Undergraduate, AI-Assisted Builder, and Student Community Leader at NIFTEM-K.",
   openGraph: {
     title: "Kruththik S S | Portfolio",
     description:

@@ -18,7 +18,7 @@
 .status { padding: 0.24rem 0.7rem; border-radius: 100px; font-size: 0.7rem; font-weight: 600; }
 .done { background: rgba(148,163,184,0.1); color: var(--mut); border: 1px solid rgba(148,163,184,0.18); }
 .dev  { background: rgba(240,165,0,0.1); color: var(--gold); border: 1px solid rgba(240,165,0,0.22); }
-.client { font-size: 0.75rem; color: var(--teal); font-family: var(--font-mono); margin-bottom: 0.5rem; }
+.client { font-size: 0.75rem; color: var(--teal); font-family: var(--font-code); margin-bottom: 0.5rem; }
 .title { font-size: 1.05rem; font-weight: 700; margin-bottom: 0.5rem; }
 .desc  { font-size: 0.875rem; color: var(--mut); margin-bottom: 0.75rem; line-height: 1.62; }
 .chips { display: flex; flex-wrap: wrap; gap: 0.45rem; margin-top: 0.5rem; }

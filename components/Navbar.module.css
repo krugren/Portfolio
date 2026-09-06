@@ -9,7 +9,7 @@
 }
 .scrolled { border-bottom-color: var(--bort); box-shadow: 0 4px 30px rgba(0,212,170,0.05); }
 
-.logo { font-family: var(--font-mono); font-size: 1.05rem; color: var(--teal); }
+.logo { font-family: var(--font-code); font-size: 1.05rem; color: var(--teal); }
 .logo em { color: var(--gold); font-style: normal; }
 
 .links { display: flex; gap: 2rem; list-style: none; }

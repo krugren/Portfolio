@@ -1,15 +1,58 @@
 ﻿"use client";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useTypewriter } from "./useTypewriter";
 import { IconLinkedIn, IconGitHub, IconEmail, IconPhone, IconGradCap, IconPin, IconBuilding, IconBrain } from "./Icons";
 import styles from "./Hero.module.css";
 
 const ROLES = ["Food Technology Undergraduate", "AI-Assisted Builder", "Student Community Leader"];
 
+// Initialises to `target` for correct SSR, then counts up from 0 on first viewport entry
+function AnimatedCounter({ target, decimals = 0, suffix = "" }: { target: number; decimals?: number; suffix?: string }) {
+  const [display, setDisplay] = useState(target); // correct value on SSR / initial paint
+  const ref = useRef<HTMLSpanElement>(null);
+  const done = useRef(false);
+
+  useEffect(() => {
+    if (done.current) return;
+    const el = ref.current;
+    if (!el) return;
+
+    const io = new IntersectionObserver(([entry]) => {
+      if (!entry.isIntersecting) return;
+      io.disconnect();
+      done.current = true;
+
+      setDisplay(0);
+      const start = performance.now();
+      const dur = 1400;
+
+      const tick = (now: number) => {
+        const t = Math.min((now - start) / dur, 1);
+        const ease = 1 - Math.pow(1 - t, 3); // cubic ease-out
+        setDisplay(parseFloat((ease * target).toFixed(decimals)));
+        if (t < 1) requestAnimationFrame(tick);
+        else setDisplay(target);
+      };
+
+      // tiny delay so user sees it start from 0
+      setTimeout(() => requestAnimationFrame(tick), 120);
+    }, { threshold: 0.4 });
+
+    io.observe(el);
+    return () => io.disconnect();
+  }, [target, decimals]);
+
+  return (
+    <span ref={ref}>
+      {decimals > 0 ? display.toFixed(decimals) : Math.round(display)}{suffix}
+    </span>
+  );
+}
+
 const STATS = [
-  { val: "6.77", label: "CGPA" },
-  { val: "3",    label: "Projects" },
-  { val: "2023", label: "Started" },
+  { target: 6.77, decimals: 2, suffix: "",  label: "CGPA" },
+  { target: 3,    decimals: 0, suffix: "+", label: "Projects" },
+  { target: 2023, decimals: 0, suffix: "",  label: "Started" },
 ];
 
 export default function Hero() {
@@ -86,13 +129,15 @@ export default function Hero() {
             </div>
           </div>
 
-          <div className={styles.card} aria-hidden>
+          <div className={styles.card}>
             <div className={styles.avatar}>K</div>
             <div className={styles.divider} />
             <div className={styles.statRow}>
-              {STATS.map(({ val, label }) => (
+              {STATS.map(({ target, decimals, suffix, label }) => (
                 <div key={label} className={styles.stat}>
-                  <span className={styles.num}>{val}</span>
+                  <span className={styles.num}>
+                    <AnimatedCounter target={target} decimals={decimals} suffix={suffix} />
+                  </span>
                   <span className={styles.slb}>{label}</span>
                 </div>
               ))}

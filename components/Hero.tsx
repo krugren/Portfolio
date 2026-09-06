@@ -52,7 +52,7 @@ function AnimatedCounter({ target, decimals = 0, suffix = "" }: { target: number
 const STATS = [
   { target: 6.77, decimals: 2, suffix: "",  label: "CGPA" },
   { target: 3,    decimals: 0, suffix: "+", label: "Projects" },
-  { target: 2023, decimals: 0, suffix: "",  label: "Started" },
+  { target: 2023, decimals: 0, suffix: "",  label: "NIFTEM-K" },
 ];
 
 export default function Hero() {

@@ -37,7 +37,7 @@ const PROJECTS = [
     desc: "Personal AI assistant for research and project workflows. Currently under development.",
     ai: "Claude — core reasoning · ChatGPT — planning layer",
     tech: ["Next.js","Claude API","ChatGPT API","Research Tools"],
-    link: "https://github.com/krugren",
+    link: "#",
   },
 ];
 
@@ -65,7 +65,7 @@ export default function Projects() {
       <div className="wrap" ref={ref}>
         <span className="section-label">Projects</span>
         <h2 className="section-title">Things I&apos;ve Built</h2>
-        <p className="section-desc">Real software, real clients, real AI workflows — from architecture through implementation and delivery.</p>
+        <p className="section-desc">Real software, real clients, real AI workflows — from architecture through implementation and iteration.</p>
 
         <div className={styles.list}>
           {PROJECTS.map(({ id, title, status, statusClass, type, note, desc, ai, tech, link }) => (
@@ -79,10 +79,10 @@ export default function Projects() {
                   <h3 className={styles.title}>{title}</h3>
                   <p className={styles.type}>{type}</p>
                 </div>
-                <a href={link} target="_blank" rel="noopener noreferrer" className={styles.link} aria-label={`${title} on GitHub`}>
+                {link !== "#" && (<a href={link} target="_blank" rel="noopener noreferrer" className={styles.link} aria-label={`${title} on GitHub`}>
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
                   GitHub
-                </a>
+                </a>)}
               </div>
 
               <p className={styles.desc}>{desc}</p>

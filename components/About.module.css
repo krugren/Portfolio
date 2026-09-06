@@ -1,4 +1,4 @@
-﻿.about { background: linear-gradient(180deg, transparent, rgba(0,212,170,0.02), transparent); }
+﻿.about { background: linear-gradient(180deg, transparent, rgba(0,150,125,), transparent); }
 .topGrid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; }
 .text p { color: var(--mut); margin-bottom: 1.1rem; font-size: 1rem; }
 .text p strong { color: var(--txt); }
@@ -6,20 +6,20 @@
 .tag { padding: 0.3rem 0.85rem; border: 1px solid var(--bor); border-radius: 100px; font-size: 0.78rem; color: var(--mut); transition: all var(--ease); cursor: default; }
 .tag:hover { border-color: var(--teal); color: var(--teal); background: var(--tdim); }
 .infoCards { display: flex; flex-direction: column; gap: 0.9rem; }
-.card { display: flex; align-items: center; gap: 1rem; padding: 1.1rem 1.3rem; background: var(--surf); border: 1px solid var(--bor); border-radius: var(--r); backdrop-filter: blur(20px); transition: all var(--ease); }
+.card { display: flex; align-items: center; gap: 1rem; padding: 1.1rem 1.3rem; background: var(--surf); border: 1px solid var(--bor); border-radius: var(--r); backdrop-filter: blur(12px); box-shadow: var(--shadow-sm); transition: all var(--ease); }
 .card:hover { border-color: var(--bort); transform: translateX(5px); }
 .ico { color: var(--teal); display: flex; align-items: center; min-width: 28px; }
 .lbl { font-size: 0.7rem; color: var(--dim); text-transform: uppercase; letter-spacing: 0.08em; }
 .val { font-size: 0.88rem; color: var(--txt); font-weight: 500; }
 
 /* Two Worlds */
-.twoWorlds { margin-top: 4rem; background: var(--surf); border: 1px solid var(--bor); border-radius: 24px; padding: 2.5rem; backdrop-filter: blur(20px); }
+.twoWorlds { margin-top: 4rem; background: var(--surf); border: 1px solid var(--bor); border-radius: 24px; padding: 2.5rem; backdrop-filter: blur(12px); box-shadow: var(--shadow-sm); }
 .worldHdr  { margin-bottom: 2rem; }
 .worldSub  { color: var(--mut); font-size: 0.9rem; margin-top: 0.25rem; }
 .worlds    { display: grid; grid-template-columns: 1fr auto 1fr; gap: 2rem; align-items: center; }
 .worldIcon { width: 48px; height: 48px; border-radius: 14px; display: flex; align-items: center; justify-content: center; background: var(--tdim); border: 1px solid var(--bort); color: var(--teal); margin-bottom: 1rem; }
 .worldTitle { font-size: 1.1rem; font-weight: 700; color: var(--teal); margin-bottom: 1rem; }
-.worldList  { list-style: none; padding: 0; border-left: 2px solid rgba(0,212,170,0.15); padding-left: 1rem; display: flex; flex-direction: column; gap: 0.55rem; }
+.worldList  { list-style: none; padding: 0; border-left: 2px solid rgba(0,150,125,); padding-left: 1rem; display: flex; flex-direction: column; gap: 0.55rem; }
 .worldList li { font-size: 0.85rem; color: var(--mut); }
 .worldList li::before { content: "→ "; color: var(--teal); font-weight: 600; }
 .worldDivider { display: flex; flex-direction: column; align-items: center; gap: 1rem; }

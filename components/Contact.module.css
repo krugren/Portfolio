@@ -1,18 +1,18 @@
-﻿.section { background: linear-gradient(180deg, transparent, rgba(0,212,170,0.02)); }
+﻿.section { background: linear-gradient(180deg, transparent, rgba(0,150,125,)); }
 .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; }
 .links { display: flex; flex-direction: column; gap: 0.9rem; }
 .link {
   display: flex; align-items: center; gap: 1rem;
   padding: 1.2rem 1.4rem; background: var(--surf);
   border: 1px solid var(--bor); border-radius: var(--r);
-  backdrop-filter: blur(20px); transition: all var(--ease);
+  backdrop-filter: blur(12px); box-shadow: var(--shadow-sm); transition: all var(--ease);
 }
 .link:hover { border-color: var(--bort); transform: translateX(6px); }
 .ico  { width: 44px; height: 44px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.15rem; background: var(--tdim); border: 1px solid var(--bort); }
 .type { font-size: 0.72rem; color: var(--dim); }
 .val  { font-size: 0.9rem; color: var(--txt); font-weight: 500; }
 .cta {
-  background: linear-gradient(135deg, rgba(0,212,170,0.08), rgba(240,165,0,0.06));
+  background: linear-gradient(135deg, rgba(0,150,125,), rgba(184,118,10,));
   border: 1px solid var(--bort); border-radius: 24px; padding: 2.5rem;
 }
 .ctaTitle { font-family: var(--font-display); font-size: 1.85rem; margin-bottom: 0.9rem; line-height: 1.2; }

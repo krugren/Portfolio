@@ -4,7 +4,7 @@
 }
 .gridBg {
   position: absolute; inset: 0; z-index: 0; pointer-events: none;
-  background-image: radial-gradient(circle, rgba(0,212,170,0.12) 1px, transparent 1px);
+  background-image: radial-gradient(circle, rgba(0,150,125,0.10) 1px, transparent 1px);
   background-size: 36px 36px;
   mask-image: radial-gradient(ellipse 80% 60% at 50% 50%, black 0%, transparent 100%);
   -webkit-mask-image: radial-gradient(ellipse 80% 60% at 50% 50%, black 0%, transparent 100%);
@@ -18,7 +18,7 @@
   margin-bottom: 1.4rem;
 }
 .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--teal); animation: pulse 2s infinite; }
-@keyframes pulse { 0%,100%{opacity:1;box-shadow:0 0 0 0 rgba(0,212,170,0.4)} 50%{opacity:.6;box-shadow:0 0 0 6px rgba(0,212,170,0)} }
+@keyframes pulse { 0%,100%{opacity:1;box-shadow:0 0 0 0 rgba(0,150,125,0.35)} 50%{opacity:.6;box-shadow:0 0 0 6px rgba(0,150,125,0)} }
 
 .name {
   font-family: var(--font-display);
@@ -52,17 +52,18 @@
 
 /* Floating card */
 .card {
-  background: var(--surf); border: 1px solid var(--bor); border-radius: 24px; padding: 2rem;
+  box-shadow: 0 8px 40px rgba(0,0,0,0.08), 0 1px 4px rgba(0,0,0,0.05);
+  background: #ffffff; border: 1px solid var(--bor); border-radius: 24px; padding: 2rem;
   min-width: 270px; backdrop-filter: blur(22px);
   display: flex; flex-direction: column; gap: 1.4rem;
-  box-shadow: 0 0 60px rgba(0,212,170,0.04);
+  box-shadow: 0 0 60px rgba(0,150,125,0.05);
 }
 .avatar {
   width: 72px; height: 72px; border-radius: 50%;
   background: linear-gradient(135deg, var(--teal), var(--gold));
   display: flex; align-items: center; justify-content: center;
-  font-family: var(--font-display); font-size: 1.85rem; font-weight: 700; color: var(--bg);
-  box-shadow: 0 8px 32px rgba(0,212,170,0.3);
+  font-family: var(--font-display); font-size: 1.85rem; font-weight: 700; color: #ffffff;
+  box-shadow: 0 8px 32px rgba(0,150,125,0.22);
 }
 .divider { height: 1px; background: var(--bor); }
 .statRow { display: flex; gap: 2rem; }
@@ -76,7 +77,7 @@
 .dualPill {
   display: inline-flex; align-items: center; gap: 0.6rem;
   margin-top: 3.5rem; padding: 0.45rem 1.2rem;
-  background: rgba(255,255,255,0.03);
+  background: rgba(0,0,0,0.04);
   border: 1px solid var(--bor); border-radius: 100px;
   font-size: 0.8rem; font-family: var(--font-code);
   position: relative; z-index: 1;
@@ -85,5 +86,6 @@
 .pillGold { display: flex; align-items: center; gap: 0.4rem; color: var(--gold); }
 .pillX { color: var(--dim); font-size: 0.7rem; }
 
-@media (max-width: 900px) { .grid { grid-template-columns: 1fr; } .card { display: none; } }
+@media (max-width: 900px) { .grid { grid-template-columns: 1fr; } .card {
+  box-shadow: 0 8px 40px rgba(0,0,0,0.08), 0 1px 4px rgba(0,0,0,0.05); display: none; } }
 @media (max-width: 600px) { .name { font-size: 2.8rem; } .typed { font-size: 0.9rem; } }

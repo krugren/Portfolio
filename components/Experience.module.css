@@ -2,7 +2,7 @@
 .timeline { position: relative; padding-left: 2.2rem; }
 .timeline::before {
   content: ''; position: absolute; left: 0; top: 10px; bottom: 10px; width: 1px;
-  background: linear-gradient(180deg, var(--teal), rgba(0,212,170,0.08));
+  background: linear-gradient(180deg, var(--teal), rgba(0,150,125,));
 }
 .item {
   position: relative; margin-bottom: 2.2rem;
@@ -15,11 +15,11 @@
   width: 13px; height: 13px; border-radius: 50%;
   border: 2px solid var(--teal); background: var(--bg); z-index: 1;
 }
-.dotActive { background: var(--teal); box-shadow: 0 0 14px rgba(0,212,170,0.55); }
+.dotActive { background: var(--teal); box-shadow: 0 0 14px rgba(0,150,125,); }
 .card {
   background: var(--surf); border: 1px solid var(--bor);
   border-radius: var(--r); padding: 1.5rem;
-  backdrop-filter: blur(20px); transition: border-color var(--ease);
+  backdrop-filter: blur(12px); box-shadow: var(--shadow-sm); transition: border-color var(--ease);
 }
 .card:hover { border-color: var(--bort); }
 .meta { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.5rem; }

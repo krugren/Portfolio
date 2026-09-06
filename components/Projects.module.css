@@ -3,18 +3,18 @@
 .card {
   background: var(--surf); border: 1px solid var(--bor);
   border-radius: 20px; padding: 2rem;
-  backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(12px); box-shadow: var(--shadow-sm); -webkit-backdrop-filter: blur(12px); box-shadow: var(--shadow-sm);
   transition: all var(--ease);
 }
-.card:hover { border-color: var(--bort); box-shadow: 0 12px 48px rgba(0,0,0,0.3); transform: translateY(-2px); }
+.card:hover { border-color: var(--bort); box-shadow: 0 12px 48px rgba(0,0,0,0.08); transform: translateY(-2px); }
 .header { display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem; margin-bottom: 1rem; }
 .badge { display: inline-flex; align-items: center; gap: 0.45rem; padding: 0.25rem 0.7rem; border-radius: 100px; font-size: 0.72rem; font-weight: 600; margin-bottom: 0.65rem; }
 .dot { width: 6px; height: 6px; border-radius: 50%; }
-.badge_live  { background: rgba(0,212,170,0.12); color: var(--teal); border: 1px solid rgba(0,212,170,0.25); }
+.badge_live  { background: rgba(0,150,125,); color: var(--teal); border: 1px solid rgba(0,150,125,); }
 .badge_live .dot { background: var(--teal); animation: blink 1.8s ease-in-out infinite; }
-.badge_proto { background: rgba(240,165,0,0.10); color: var(--gold); border: 1px solid rgba(240,165,0,0.2); }
+.badge_proto { background: rgba(184,118,10,); color: var(--gold); border: 1px solid rgba(184,118,10,); }
 .badge_proto .dot { background: var(--gold); }
-.badge_dev   { background: rgba(148,163,184,0.10); color: var(--mut); border: 1px solid var(--bor); }
+.badge_dev   { background: rgba(100,116,139,0.08); color: var(--mut); border: 1px solid var(--bor); }
 .badge_dev .dot { background: var(--mut); }
 @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0.4} }
 .title { font-size: 1.25rem; font-weight: 700; }
@@ -30,7 +30,7 @@
 .note {
   display: flex; align-items: center; gap: 0.5rem;
   font-size: 0.8rem; color: var(--dim);
-  background: rgba(240,165,0,0.05); border: 1px solid rgba(240,165,0,0.15);
+  background: rgba(184,118,10,); border: 1px solid rgba(184,118,10,);
   border-radius: 8px; padding: 0.5rem 0.85rem;
   margin-bottom: 0.9rem;
 }
@@ -38,7 +38,7 @@
   display: flex; gap: 0.75rem; align-items: flex-start;
   margin-bottom: 1rem;
   padding: 0.65rem 0.9rem;
-  background: rgba(0,212,170,0.04); border: 1px solid rgba(0,212,170,0.12);
+  background: rgba(0,150,125,); border: 1px solid rgba(0,150,125,);
   border-radius: 10px; flex-wrap: wrap;
 }
 .aiLabel { font-size: 0.72rem; font-weight: 700; color: var(--teal); font-family: var(--font-code); white-space: nowrap; padding-top: 1px; }

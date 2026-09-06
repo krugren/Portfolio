@@ -1,4 +1,4 @@
-﻿.section { background: linear-gradient(180deg, transparent, rgba(0,212,170,0.025), transparent); }
+﻿.section { background: linear-gradient(180deg, transparent, rgba(0,150,125,), transparent); }
 .steps { display: flex; flex-direction: column; gap: 0; }
 .step {
   display: grid; grid-template-columns: 56px 1fr; gap: 1.5rem;
@@ -28,7 +28,7 @@
   background: var(--surf); border: 1px solid var(--bort);
   border-radius: var(--r);
   font-size: 0.92rem; color: var(--mut);
-  backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(12px); box-shadow: var(--shadow-sm); -webkit-backdrop-filter: blur(12px); box-shadow: var(--shadow-sm);
 }
 .taglineInner strong { color: var(--txt); }
 @media (max-width: 600px) { .step { grid-template-columns: 44px 1fr; gap: 1rem; } }

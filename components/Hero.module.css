@@ -1,6 +1,6 @@
 ﻿.hero {
   min-height: 100vh; display: flex; align-items: center;
-  padding-top: 68px; overflow: hidden; position: relative; z-index: 1;
+  padding-top: 24px; overflow: hidden; position: relative; z-index: 1;
 }
 .gridBg {
   position: absolute; inset: 0; z-index: 0; pointer-events: none;

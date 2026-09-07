@@ -12,9 +12,8 @@ export default function Navbar() {
   useEffect(() => {
     const onScroll = () => {
       const y = window.scrollY;
-      if (y > 10)  { setVisible(true);  }
-      if (y > 60)  { setScrolled(true); }
-      else         { setScrolled(false); }
+      setVisible(y > 40);     // show after 40px, hide again at top
+      setScrolled(y > 80);    // add shadow/border after 80px
     };
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);

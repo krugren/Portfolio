@@ -47,11 +47,12 @@ export default function About() {
           <div>
             <span className="section-label">About Me</span>
             <h2 className="section-title">Where Food Science<br />Meets Technology</h2>
-            <div className={styles.text}>
-              <p>I am a <strong>Food Technology undergraduate at NIFTEM-K</strong> with hands-on experience in QA/QC, sensory evaluation, and food safety — and I also <strong>build and ship real software</strong> using AI as my development engine.</p>
+                          <div className={styles.text}>
+              <p>I&apos;m a Food Technology undergraduate at NIFTEM-K who builds real software with AI as my engineering partner — and I want to bring that same hands-on approach to other students on campus. As <strong>Secretary of Vyaktitva</strong>, I already plan events, manage partnerships, and handle the budgeting and documentation that keeps a student society running; I&apos;d like to point that same experience at building an AI-fluent community here.</p>
+              <p>My grounding is in food science: hands-on QA/QC, sensory evaluation, and food safety work, including HACCP and ISO 22000:2018 certification. Outside that, I build and ship software — using AI as my core development engine, not an occasional shortcut.</p>
               <p>I use <strong>ChatGPT for requirements, planning and architecture</strong>, then direct <strong>Claude models through Google Antigravity</strong> for implementation, review and iteration. I validate the output against my requirements and redirect the agent when needed.</p>
-              <p>As <strong>Secretary of Vyaktitva</strong> and a MOFPI-appointed Liaisoning Officer at World Food India 2025, I operate at the intersection of community, industry, and technology.</p>
-            </div>
+              <p>As a <strong>MOFPI-appointed Liaisoning Officer</strong> at World Food India 2025, I&apos;ve also worked at the intersection of industry, government and community — the same combination I&apos;d bring to running a Claude Builder Club: organizing people, managing logistics, and making sure things actually happen.</p>
+              </div>
             <div className={styles.tags}>
               {TAGS.map(t => <span key={t} className={styles.tag}>{t}</span>)}
             </div>

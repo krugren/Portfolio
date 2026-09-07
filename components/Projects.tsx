@@ -13,7 +13,7 @@ const PROJECTS = [
     desc: "Full-stack farmstay booking platform built for a real client — guest website, booking workflow, reviews, contact flows, admin dashboard, 20+ REST endpoints, authentication and Google Maps integration.",
     ai: "ChatGPT — planning & architecture · Claude via Antigravity — implementation & iteration",
     tech: ["Next.js 16","Prisma","REST API","PostgreSQL","SEO","Auth","Google Maps"],
-    link: "https://github.com/krugren",
+    link: "https://github.com/krugren/Poudyal-Farms",
   },
   {
     id: "saravana-caters",
@@ -25,7 +25,7 @@ const PROJECTS = [
     desc: "End-to-end catering ERP for a real catering business — multi-step event booking, live menu management, admin order tracking, and secure client portal. Delivered for an active client.",
     ai: "ChatGPT — planning & logic · Claude via Antigravity — implementation · Claude Opus / Gemini Flash — security & SEO review",
     tech: ["Next.js","Prisma","SQLite","REST API","Auth","Admin Dashboard"],
-    link: "https://github.com/krugren",
+    link: "https://github.com/krugren/Saravana-Caters",
   },
   {
     id: "jarvis",
